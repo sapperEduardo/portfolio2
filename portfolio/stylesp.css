@@ -1,0 +1,48 @@
+.detalles-project {
+  padding-top: 40px; /* Ajusta el espaciado superior */
+}
+
+.detalles-project h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.detalles-project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detalles-project p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.detalles-project ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.detalles-project ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+.detalles-project a.btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.fab.fa-java {
+  color: #f08080; /* Color rojo para Java */
+}
+
+.fab.fa-python {
+  color: #ffe203; /* Color azul claro para Python */
+}
+
+.fas.fa-database {
+  color: #4682b4; /* Color azul medio para bases de datos */
+}

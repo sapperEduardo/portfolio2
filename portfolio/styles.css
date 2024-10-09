@@ -1,0 +1,434 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* --------------NavBar--------------- */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.navbar-text {
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: gray;
+}
+
+/* ------------------Hero-------------- */
+.hero {
+  position: relative;
+  background: url("img/foto-fondo.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: "Noto Sans Mono";
+  font-size: 5rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-intro {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero a {
+  position: relative;
+  z-index: 2;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* --------Sobre Mi------------ */
+#about {
+  background: linear-gradient(45deg, #34495e, #5dade2, #aab7b8, #ecf0f1);
+  background-size: 400%, 400%;
+  animation: gradient 12s ease-in infinite;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0%, 50%;
+  }
+}
+#kill-items {
+  background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.about-description {
+  text-indent: 30px; /* Sangría del párrafo */
+}
+
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar los elementos en la lista */
+}
+
+.list-inline-item {
+  margin: 10px 15px;
+  font-size: 1.2rem;
+  color: #333;
+  display: block; /* Para que cada habilidad esté en su propia fila */
+  text-align: center;
+}
+
+.list-inline-item i {
+  margin-right: 8px;
+}
+
+.list-inline-item:hover i {
+  color: #0056b3;
+}
+
+/* Asignamos colores específicos a cada icono */
+.list-inline-item .fab.fa-java {
+  color: #f08080; /* Color rojo para Java */
+}
+
+.list-inline-item .fab.fa-python {
+  color: #f1c812; /* Color azul claro para Python */
+}
+
+.list-inline-item .fas.fa-database {
+  color: #4682b4; /* Color azul medio para bases de datos */
+}
+
+img.rounded-circle {
+  width: 400px; /* Ajusta este valor según el tamaño que desees */
+  height: 400px; /* Mantén el mismo valor que el ancho para que sea un círculo perfecto */
+  object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+}
+
+/* --------Proyectos con imagen de fondo------------ */
+#projects {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url("img/background.jpg") no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+/* Imágenes cuadradas con efecto de hover */
+.carousel-item img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.carousel-item img:hover {
+  transform: scale(1.04); /* Agrandar la imagen al pasar el mouse */
+}
+
+/* Controles personalizados más visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #f8c102;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #d39e00;
+}
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators button.active {
+  background-color: #f8c102;
+}
+
+/* Mejora del estilo de los textos y botones */
+.carousel-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.carousel-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.carousel-item ul {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.carousel-item ul li {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.carousel-item ul li i {
+  margin-right: 8px;
+  color: #f8c102;
+}
+
+.carousel-item .btn {
+  margin-top: 15px;
+  color: #333;
+  background-color: #f8c102;
+  border: none;
+}
+
+.carousel-item .btn:hover {
+  background-color: #d39e00;
+}
+
+/* -------------------Footer-------------------------*/
+footer .btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+footer .btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+footer i:hover {
+  color: #007bff;
+}
+
+footer {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+footer i {
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: #007bff;
+}
+
+/* --- Media Queries para dispositivos de hasta 450px --- */
+@media (max-width: 450px) {
+  #projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .carousel-item {
+    min-height: 400px;
+  }
+
+  /* Imágenes más pequeñas en móviles */
+  .carousel-item img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
+  }
+
+  .carousel-item ul li {
+    font-size: 1rem;
+  }
+
+  /* Controles del carrusel más pequeños */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --------Contacto con imagen de fondo------------ */
+#contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url("img/contact-background.jpg") no-repeat center center/cover; /* Cambia 'contact-background.jpg' por el nombre de tu imagen */
+  color: #fff;
+  position: relative;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Ajusta el color de fondo para mejorar la legibilidad */
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.form-label {
+  color: #000;
+}
+
+#contact form {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fondo blanco semitransparente para el formulario */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* --- Media Queries para dispositivos de hasta 450px --- */
+@media (max-width: 450px) {
+  #projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .carousel-item {
+    min-height: 400px;
+  }
+
+  /* Imágenes más pequeñas en móviles */
+  .carousel-item img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
+  }
+
+  .carousel-item ul li {
+    font-size: 1rem;
+  }
+
+  /* Controles del carrusel más pequeños */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  img.rounded-circle {
+    width: 300px; /* Ajusta este valor según el tamaño que desees */
+    height: 300px; /* Mantén el mismo valor que el ancho para que sea un círculo perfecto */
+  }
+}
+
+@media (max-width: 700px) {
+  img.rounded-circle {
+    width: 260px; /* Ajusta este valor según el tamaño que desees */
+    height: 260px; /* Mantén el mismo valor que el ancho para que sea un círculo perfecto */
+  }
+}
+
+@media (max-width: 767px) {
+  .img-fluid {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    height: auto;
+    display: block;
+  }
+}
